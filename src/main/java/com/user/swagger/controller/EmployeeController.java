@@ -17,12 +17,13 @@ import com.user.swagger.model.Employee;
 public class EmployeeController {
 
     private List<Employee> employees = createList();
+
     @RequestMapping(value = "/employees", method = RequestMethod.GET, produces = "application/json")
     public List<Employee> firstPage() {
         return employees;
     }
 
-    @DeleteMapping(path = { "/{id}" })
+    @DeleteMapping(path = {"/{id}"})
     public Employee delete(@PathVariable("id") int id) {
         Employee deletedEmp = null;
         for (Employee emp : employees) {
@@ -34,6 +35,7 @@ public class EmployeeController {
         }
         return deletedEmp;
     }
+
     @PostMapping
     public Employee create(@RequestBody Employee user) {
         employees.add(user);

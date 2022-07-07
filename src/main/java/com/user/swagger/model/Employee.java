@@ -20,6 +20,7 @@ public class Employee {
     public String getDesignation() {
         return designation;
     }
+
     public void setDesignation(String designation) {
         this.designation = designation;
     }
@@ -39,6 +40,7 @@ public class Employee {
     public void setEmpId(String empId) {
         this.empId = empId;
     }
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -51,6 +53,7 @@ public class Employee {
         result = prime * result + (int) (temp ^ (temp >>> 32));
         return result;
     }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
